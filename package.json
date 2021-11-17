@@ -8,6 +8,7 @@
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
+    "test": "echo 'no testing'",
     "publish": "electron-forge publish",
     "lint": "eslint --ext .ts,.tsx ."
   },
