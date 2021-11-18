@@ -1,15 +1,15 @@
 language: node_js
-node_js:
-  - lts/*
+node_js: "10"
 os:
 - linux
-dist: trusty
-osx_image: xcode8.3
-sudo: false
+- osx
+dist: bionic
+osx_image: xcode10.1
 
 cache:
+  npm: true
+  yarn: true
   directories:
-  - node_modules
   - $HOME/.cache/electron
 
 addons:
@@ -20,14 +20,10 @@ addons:
 
 branches:
   only:
-  - main
-
-install:
-- npm install
-- npm update
+  - master
+  - /^v\d+\.\d+\.\d+/
 
 script:
 - npm run lint
 - if test -z "$TRAVIS_TAG"; then npm run make; fi
-# after_success: if test -n "$TRAVIS_TAG"; then npm run publish; fi
-after_success: npm run publish; fi
+after_success: if test -n "$TRAVIS_TAG"; then npm run publish; fi
