@@ -1,7 +1,7 @@
 platform:
 - x64
 environment:
-  nodejs_version: "8"
+  nodejs_version: 16
 cache:
 - '%APPDATA%\npm-cache'
 - '%USERPROFILE%\.electron'
