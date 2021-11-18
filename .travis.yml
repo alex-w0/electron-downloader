@@ -20,7 +20,7 @@ addons:
 
 branches:
   only:
-  - master
+  - main
   - /^v\d+\.\d+\.\d+/
 
 script:
