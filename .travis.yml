@@ -7,6 +7,11 @@ dist: trusty
 osx_image: xcode8.3
 sudo: false
 
+before_install:
+  - sudo apt-get -y install python3-pip python-dev
+  - python3 -V
+  - pip3 -V
+
 cache:
   directories:
     - node_modules
@@ -33,4 +38,5 @@ deploy:
   file: "test"
   skip_cleanup: true
   on:
+    branch: main
     tags: false
