@@ -8,9 +8,9 @@ osx_image: xcode8.3
 sudo: false
 
 before_install:
-  - sudo apt-get -y install python3-pip python-dev
-  - python3 -V
-  - pip3 -V
+  - choco install python3
+  - export PATH="/c/Python38:/c/Python38/Scripts:$PATH"
+  - python -m pip install --upgrade pip wheel
 
 cache:
   directories:
