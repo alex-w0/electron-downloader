@@ -58,8 +58,9 @@ script:
 deploy:
   provider: script
   script: bash deploy.travis.sh
-  skip_cleanup: true
-  # provider: releases
+  skip_cleanup:
+    true
+    # provider: releases
   # api_key: $GH_TOKEN
   # file: "release"
   # skip_cleanup: true
