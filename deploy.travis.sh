@@ -1,6 +1,5 @@
 #! /bin/bash
 
-echo GH_TOKEN
 # if [ "$TRAVIS_OS_NAME" == osx ]; then
 #     # deploy on mac
      yarn publish
